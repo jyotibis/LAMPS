@@ -1,0 +1,47 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Swap Text</title>
+
+    <style>
+      .l1 {
+        font-family: "Courier New", Courier, monospace;
+        color: blue;
+      }
+      .l2 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: red;
+      }
+      .b {
+        width: 50px;
+        height: 30px;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Paragraph 1</h1>
+    <p class="l1">
+      JavaScript is the world's most popular programming language. It is the
+      programming language of the Web It is easy to learn.
+    </p>
+    <h1>Paragraph 2</h1>
+    <p class="l2">
+      This webpage is created to swap data between two paragraphs. This is done
+      using javascript.
+    </p>
+    <button class="b" onClick="swap()">SWAP</button>
+
+    <script>
+      function swap() {
+        a = document.getElementsByClassName("l1")[0];
+        b = document.getElementsByClassName("l2")[0];
+        temp = a.textContent;
+        a.textContent = b.textContent;
+        b.textContent = temp;
+      }
+    </script>
+  </body>
+</html>
+
